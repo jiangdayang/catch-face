@@ -1,0 +1,68 @@
+catch-face/
+├── cloudfunctions/  # 云函数目录
+│   ├── compressImage/  # 压缩图片的云函数
+│   │   ├── index.js
+│   │   ├── package.json
+│   ├── detectFace/  # 检测人脸有效性的云函数
+│   │   ├── index.js
+│   │   ├── package.json
+│   ├── verifyCode/  # 验证码验证的云函数
+│   │   ├── index.js
+│   │   ├── package.json
+├── miniprogram/  # 小程序主要代码目录
+│   ├── pages/  # 页面目录
+│   │   ├── index/  # 首页
+│   │   │   ├── index.js
+│   │   │   ├── index.json
+│   │   │   ├── index.wxml
+│   │   │   ├── index.wxss
+│   │   ├── adjustPhoto/  # 照片调整页面
+│   │   │   ├── adjustPhoto.js
+│   │   │   ├── adjustPhoto.json
+│   │   │   ├── adjustPhoto.wxml
+│   │   │   ├── adjustPhoto.wxss
+│   │   ├── verify/  # 验证码验证页面
+│   │   │   ├── verify.js
+│   │   │   ├── verify.json
+│   │   │   ├── verify.wxml
+│   │   │   ├── verify.wxss
+│   ├── app.js  # 小程序全局逻辑
+│   ├── app.json  # 小程序全局配置
+│   ├── app.wxss  # 小程序全局样式
+│   ├── project.config.json  # 项目配置文件
+├── face-img/  # 存储人脸图像的本地服务器目录
+│   ├── .gitignore  # 忽略文件
+├── README.md  # 项目说明文件
+
+主要页面和功能说明
+首页（index）
+
+index.js: 首页的逻辑处理，包括选择照片入口。
+index.json: 首页的配置。
+index.wxml: 首页的结构。
+index.wxss: 首页的样式。
+照片调整页面（adjustPhoto）
+
+adjustPhoto.js: 照片调整页面的逻辑处理，包括照片压缩和灰色人脸定位框的操作。
+adjustPhoto.json: 照片调整页面的配置。
+adjustPhoto.wxml: 照片调整页面的结构。
+adjustPhoto.wxss: 照片调整页面的样式。
+验证码验证页面（verify）
+
+verify.js: 验证码验证页面的逻辑处理，包括验证码的输入和验证。
+verify.json: 验证码验证页面的配置。
+verify.wxml: 验证码验证页面的结构。
+verify.wxss: 验证码验证页面的样式。
+云函数说明
+compressImage
+
+index.js: 处理照片压缩的云函数逻辑。
+package.json: 云函数的依赖配置。
+detectFace
+
+index.js: 处理人脸有效性检测的云函数逻辑。
+package.json: 云函数的依赖配置。
+verifyCode
+
+index.js: 处理手机验证码验证的云函数逻辑。
+package.json: 云函数的依赖配置。
